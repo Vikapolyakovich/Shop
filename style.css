@@ -19,7 +19,6 @@ img {
 .container {
     padding-left: calc(50% - 570px);
     padding-right: calc(50% - 570px);
-    padding-bottom: 60px;
 }
 
 .header {
@@ -44,21 +43,23 @@ img {
 }
 
 .promo {
+    padding-right: calc(50% - 570px);
     background: #F1E4E6;
     display: flex;
     align-items: center;
 }
 
 .promo-img {
-    width: 50%;
-    margin-right: 64px;
+    max-width: 50%;
 }
-
-.promo-content {}
 
 .promo-info {
     border-left: 12px solid #F16D7F;
     padding-left: 16px;
+}
+
+.promo-content {
+    padding-left: 63px;
 }
 
 .promo-title {
@@ -70,16 +71,13 @@ img {
 }
 
 .promo-heading {
-    font-size: 32px;
+    font-size: 37px;
     font-weight: 700;
-    line-height: 38px;
     color: #222222;
 }
 
 .promo-heading-fashion {
-    font-size: 37px;
     font-weight: 700;
-    line-height: 44px;
     color: #F16D7F;
 }
 
@@ -122,7 +120,7 @@ img {
 .offer-title2 {
     color: #F16D7F;
     size: 24px;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 28.8px;
 }
 
@@ -130,6 +128,7 @@ img {
 /* products */
 
 .products {
+    padding-bottom: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -161,6 +160,7 @@ img {
 .product-head {
     font-size: 30px;
     line-height: 36px;
+    font-weight: 400;
 }
 
 .product-title {
@@ -193,4 +193,83 @@ img {
     color: #FF6A6A;
     font-size: 16px;
     border: solid 1px #FF6A6A;
+}
+
+@media (min-width: 1440px) {
+    .promo {
+        padding-left: 200px;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* стили для планшета */
+    .promo-heading {
+        font-size: 24px;
+    }
+    .container {
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }
+    .header {
+        padding-left: calc(50% - 352px);
+        padding-right: calc(50% - 352px);
+    }
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+    .promo-content {
+        padding-left: 39px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* стили для мобильного */
+    .header-link-site {
+        display: none;
+    }
+    .container {
+        padding-left: calc(50% - 171.5px);
+        padding-right: calc(50% - 171.5px);
+    }
+    .promo-img {
+        display: none;
+    }
+    .promo {
+        height: 375px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .promo-title {
+        font-size: 38px;
+        line-height: 45.6px;
+    }
+    .promo-heading {
+        font-size: 20px;
+    }
+    .promo-content {
+        padding: 0;
+    }
+    .offer {
+        padding-top: 64px;
+        padding-bottom: 64px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .offer-item4 img {
+        height: 111px;
+        object-fit: cover;
+    }
+    .product-desc {
+        font-size: 14px;
+    }
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+        margin-bottom: 32px;
+    }
 }
